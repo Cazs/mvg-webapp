@@ -1,0 +1,177 @@
+#event-carousel
+{
+  position: relative;
+  width:100%;
+  margin:0 auto;
+  background-color: #002638;
+}
+
+#events_left_label
+{
+  position:absolute;
+  top:-20px;
+  left:0px;
+  width:220px;
+  height:70px;
+  z-index:10;
+  overflow:hidden;
+}
+
+#events_left_label>div
+{
+  width:210px;
+  height:70px;
+  margin-left:-20px;
+  background-color:#E84E0E;
+  -webkit-transform:skew(30deg);
+  -moz-transform:skew(30deg);
+  -o-transform:skew(30deg);
+  transform:skew(30deg);
+  box-shadow: 10px 5px 25px #000;
+}
+#events_left_label>div>h3
+{
+  margin-left:50px;
+  top: 10px;
+  -webkit-transform:skew(-30deg);
+  -moz-transform:skew(-30deg);
+  -o-transform:skew(-30deg);
+  transform:skew(-30deg);
+}
+
+#event-slides
+{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+#event-slides ul
+{
+  list-style: none;
+  width:100%;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#event-slides li
+{
+  width:100%;
+  height:100%;
+  float:left;
+  text-align: center;
+  position: relative;
+  font-family:lato, sans-serif;
+}
+/* Styling for prev and next buttons */
+.btn-bar
+{
+    max-width: 346px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+    width: 10%;
+}
+
+#buttons
+{
+  padding:0 0 5px 0;
+  float:right;
+}
+
+#buttons a
+{
+  text-align:center;
+  display:block;
+  font-size:20px;
+  float:left;
+  outline:0;
+  color:#b14943;
+  text-decoration:none;
+  display:block;
+  width:35px;
+}
+
+a#prev:hover, a#next:hover
+{
+  color:#FFF;
+  text-shadow:.5px 0px #b14943;
+}
+
+.quote-phrase, .quote-author
+{
+  font-family:sans-serif;
+  font-weight:300;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 20px;
+  font-family:'Lato', Calibri, Arial, sans-serif;
+}
+
+.quote-phrase
+{
+  font-size:24px;
+  color:#FFF;
+  font-style:italic;
+  text-shadow:.5px 0px #b14943;
+}
+
+.quote-marks
+{
+  font-size:30px;
+  padding:0 3px 3px;
+  position:inherit;
+}
+
+.quote-author
+{
+  font-style:normal;
+  font-size:20px;
+  color:#b14943;
+  font-weight:400;
+}
+
+.quoteContainer, .authorContainer
+{
+  display: table;
+  width: 100%;
+}
+
+/***/
+@media (max-width: 991px)
+{
+  #events_left_label
+  {
+    width:160px;
+  }
+  #events_left_label>div
+  {
+    width:160px;
+  }
+  #events_left_label>div>h3
+  {
+    margin-left:30px;
+  }
+  #event-slides
+  {
+    position: relative;
+    width:70%;
+    margin-left: 35%;
+  }
+
+  #event-slides p
+  {
+    font-size: 10pt;
+  }
+}
+
+@media(min-width:992px)
+{
+  #event-carousel
+  {
+    top:-70px;
+  }
+}

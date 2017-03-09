@@ -1,0 +1,12 @@
+*
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 3.5pt;
+}
+
+.mvg-link:hover
+{
+  fill:#FF3D16;
+  cursor:pointer;
+}

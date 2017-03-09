@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<?xml-stylesheet type="text/css" href="../css/mvg_nav.css"?><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100%"
+   height="100%"
+   viewBox="0 0 200 250"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92pre2 r"
+   sodipodi:docname="mvg_services (3rd copy).svg">
+  <g
+     inkscape:label="nav"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="mvg_solutions"
+       class="mvg-link"
+       transform="translate(-15.17474,-23.66213)"
+       onclick="showTab('mvg_solutions')"
+       stroke-width="1"
+       stroke-miterlimit="4"
+       stroke-dasharray="none">
+      <text
+         xml:space="preserve"
+         x="59.698605"
+         y="117.17107"
+         id="text4642"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(0.96791384,1.0331498)">
+         <tspan
+           x="59.698605"
+           y="117.17107"
+           id="tspan4640">
+           <tspan
+             x="59.698605"
+             y="117.17107"
+             id="tspan4638">MVG Travel</tspan>
+         </tspan>
+      </text>
+      <text
+         xml:space="preserve"
+         x="59.863495"
+         y="125.94271"
+         id="text4636"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(1.0041913,0.9958262)">
+         <tspan
+           sodipodi:role="line"
+           x="59.863495"
+           y="125.94271"
+           id="tspan4634">
+           <tspan
+             x="59.863495"
+             y="125.94271"
+             id="tspan4632">Business</tspan>
+         </tspan>
+      </text>
+      <text
+         xml:space="preserve"
+         x="58.892464"
+         y="131.33167"
+         id="text4630"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(1.0102105,0.98989271)">
+
+         <tspan
+           sodipodi:role="line"
+           x="58.892464"
+           y="131.33167"
+           id="tspan4628">
+           <tspan
+             x="58.892464"
+             y="131.33167"
+             id="tspan4626">Solutions</tspan>
+         </tspan>
+      </text>
+    </g>
+    <g
+       id="mvg_events"
+       class="mvg-link"
+       transform="translate(-51.421993,-10.148903)"
+       onclick="showTab('mvg_events')"
+       stroke-width="1"
+       stroke-miterlimit="4"
+       stroke-dasharray="none">
+      <text
+         xml:space="preserve"
+         x="59.244289"
+         y="118.45289"
+         id="text4616"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(0.96791383,1.0331498)">
+         <tspan
+           sodipodi:role="line"
+           x="59.244289"
+           y="118.45289"
+           id="tspan4614">
+           <tspan
+             x="59.244289"
+             y="118.45289"
+             id="tspan4612">MVG Travel</tspan>
+         </tspan>
+      </text>
+      <text
+         xml:space="preserve"
+         x="61.294159"
+         y="128.22025"
+         id="text4624"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(1.0041913,0.99582622)"><tspan
+           x="61.294159"
+           y="128.22025"
+           id="tspan4622"><tspan
+             x="61.294159"
+             y="128.22025"
+             id="tspan4618">Events</tspan></tspan></text>
+    </g>
+    <g
+       id="mvg_agency"
+       class="mvg-link"
+       onclick="showTab('mvg_agency')"
+       stroke-width="1"
+       stroke-miterlimit="4"
+       stroke-dasharray="none">
+
+      <text
+         xml:space="preserve"
+         x="123.48917"
+         y="95.056908"
+         id="text4654"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(0.96791384,1.0331498)"><tspan
+           x="123.48917"
+           y="95.056908"
+           id="tspan4652"><tspan
+             x="123.48917"
+             y="95.056908"
+             id="tspan4650">MVG Travel</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         x="121.53768"
+         y="104.30691"
+         id="text4648"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(1.0041913,0.9958262)"><tspan
+           x="121.53768"
+           y="104.30691"
+           id="tspan4646"><tspan
+             x="121.53768"
+             y="104.30691"
+             id="tspan4644">Agency</tspan></tspan></text>
+    </g>
+    <g
+       transform="translate(114.66959,-155.9075)"
+       id="mvg_vip"
+       class="mvg-link"
+       onclick="showTab('mvg_vip')"
+       stroke-width="1"
+       stroke-miterlimit="4"
+       stroke-dasharray="none">
+
+      <text
+         xml:space="preserve"
+         x="43.422096"
+         y="259.52493"
+         id="text4666"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(0.96791384,1.0331498)"><tspan
+           x="43.422096"
+           y="259.52493"
+           id="tspan4664"><tspan
+             x="43.422096"
+             y="259.52493"
+             id="tspan4662">MVG Travel</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         x="49.407253"
+         y="274.5936"
+         id="text4660"
+         font-size="3.88px"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-family="Verdana"
+         stroke-width="1"
+         stroke-miterlimit="4"
+         transform="scale(1.0041913,0.99582621)"><tspan
+           x="49.407253"
+           y="274.5936"
+           id="tspan4658"><tspan
+             x="49.407253"
+             y="274.5936"
+             id="tspan4656">VIP</tspan></tspan></text>
+    </g>
+    <g
+       id="mvg_main"
+       class="mvg-link"
+       stroke-width="0"
+       stroke-miterlimit="4"
+       stroke-dasharray="none">
+
+      <path
+         id="mvg_char_m"
+         d="m 86,87 4,8 4,-8"
+         fill="#000"
+         stroke-linecap="round"
+         stroke-linejoin="miter"
+         stroke-opacity="1"
+         stroke-miterlimit="4"
+         stroke-dasharray="none" />
+
+      <path
+         id="mvg_char_v"
+         d="m 86,85 v -9 l 4,7 4,-7 v 9"
+         fill="#fff"
+         stroke-linecap="round"
+         stroke-linejoin="miter"
+         stroke-opacity="1"
+         stroke-miterlimit="4"
+         stroke-dasharray="none" />
+
+      <path
+         id="mvg_char_g"
+         d="m 89.621047,98.380516 c -1,1 -1,1.998114 0,2.998114 h 2 l -1,-1 2.62352,0.002 v 2.62142 c -0.24441,1 -5.197913,2.56821 -6.621418,-0.75433 -0.719188,-1.24567 -0.794437,-3.496924 0.377953,-5.487876 0.304575,-0.6029 5.66309,-0.7578 5.866142,0 l 0.130811,1.998622 -0.377008,-0.37795"
+         fill="#000"
+         stroke-miterlimit="4"
+         stroke-linecap="round"
+         stroke-linejoin="miter"
+         stroke-dasharray="none"
+         stroke-opacity="1"/>
+    </g>
+  </g>
+  <g
+     id="layer2"
+     inkscape:label="mvg"
+     style="display:inline">
+
+    <path
+       sodipodi:nodetypes="cccccccccccccccccccccc"
+       id="path4674"
+       d="m 94.24252,86.754646 6.91943,-6.683645 24.82116,5.677278 4.93359,5.538177 6.17891,-2.36317 27.15862,10.962127 5.27056,4.054587 -2.09556,-9.610894 -31.2208,-19.579105 -35.27993,-18.25625 C 100,44 100,44 99.453833,37.443751 97.895833,8.6041667 80.697917,8.6041667 79.733,37.708334 79.375,44.322917 79,44 79.086614,57.022918 L 47.625,74.750001 16.404165,94.329106 14.308597,103.94 19.579166,99.885413 46.73776,88.923286 l 6.178907,2.36317 4.404426,-5.538177 21.52474,-5.706611 6.911647,6.712978"
+       stroke-miterlimit="4"
+       stroke-linecap="round"
+       stroke-linejoin="miter"
+       stroke-dasharray="none"
+       stroke-opacity="1"/>
+
+    <path
+      stroke-miterlimit="4"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-dasharray="none"
+      stroke-opacity="1"
+      sodipodi:nodetypes="ccccccccccc"
+      d="m 125.67708,69.458334 1.42292,-6.614582 0.95833,-1.322919 c 1.5875,-1.5875 2.88565,-2.030197 4.95667,-2.087833 1.85209,-10e-7 2.98083,0.500333 4.56833,2.087834 l 1.02267,1.322917 1.62317,7.9375 v 6.35"
+      id="path4676"/>
+
+    <path
+       sodipodi:nodetypes="cccccccc"
+       id="path4686"
+       d="M 58.208333,68.135417 56.885417,63.744 55.899,61.520834 C 54.568864,60.197917 53.975,59.66875 51.471,59.575 c -2.2585,0.09375 -3.581417,0.8875 -4.632518,1.945834 L 45.279,64.166667 44.192645,70.781251 43.65625,77.395834"
+       stroke-miterlimit="4"
+       stroke-linecap="round"
+       stroke-linejoin="miter"
+       stroke-dasharray="none"
+       stroke-opacity="1"/>
+
+    <path
+       d="m 125.9417,107.55827 h 8.20209 l -3.97459,19.05006 z"
+       id="path4717"
+       stroke-miterlimit="4"
+       stroke-linecap="round"
+       stroke-linejoin="miter"
+       stroke-dasharray="none"
+       stroke-opacity="1"
+       sodipodi:nodetypes="cccc" />
+
+    <path
+       sodipodi:nodetypes="cccc"
+       id="path4719"
+       d="m 165.41199,120.771 h 4.502 l -1.87411,19.05006 z"
+       stroke-miterlimit="4"
+       stroke-linecap="round"
+       stroke-linejoin="miter"
+       stroke-dasharray="none"
+       stroke-opacity="1"/>
+
+    <path
+      stroke-miterlimit="4"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-dasharray="none"
+      stroke-opacity="1"
+      sodipodi:nodetypes="ccccccccccc"
+      d="m 12.699986,120.78746 h 4.502 l -1.87411,19.05006 z"
+      id="path4721"/>
+
+    <path
+       sodipodi:nodetypes="cccc"
+       id="path4709"
+       d="m 49.212501,108.61661 h 8.202087 L 53.44,127.66667 Z"
+       stroke-miterlimit="4"
+       stroke-linecap="round"
+       stroke-linejoin="miter"
+       stroke-dasharray="none"
+       stroke-opacity="1"/>
+  </g>
+</svg>

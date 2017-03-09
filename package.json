@@ -1,0 +1,27 @@
+{
+  "name": "mvg",
+  "version": "1.0.0",
+  "description": "Website for Master Visionaries Group Travel - A transport solutions company.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mvg",
+    "travel",
+    "master",
+    "visionary",
+    "group",
+    "agency",
+    "travel-agency"
+  ],
+  "dependencies":{
+    "express":"*",
+    "body-parser":"*"
+  },
+  "devDependencies":{
+    "nodemon":"*"
+  },
+  "author": "Casper",
+  "license": "ISC"
+}
