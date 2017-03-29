@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
+  "keywords":
+  [
     "mvg",
     "travel",
     "master",
@@ -15,11 +16,15 @@
     "agency",
     "travel-agency"
   ],
-  "dependencies":{
+  "dependencies":
+  {
     "express":"*",
-    "body-parser":"*"
+    "body-parser":"*",
+    "mongodb":"*",
+    "mongoose":"*"
   },
-  "devDependencies":{
+  "devDependencies":
+  {
     "nodemon":"*"
   },
   "author": "Casper",
