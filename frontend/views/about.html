@@ -1,6 +1,6 @@
 <div style="margin-top:140px;width:100%;">
   <div class="jumbotron page-header-container">
-    <div class="page-header" style="background-image:url(../images/panorama-2.jpg)">
+    <div class="page-header" style="background-image:url(../images/backgrounds/panorama-2.jpg)">
       <div style="width:100%;height:102%;margin:auto;background:rgba(0,0,0,0.5);">
         <h2 style="text-align:center;color:#fff;padding-top:10%;font-size:42pt;">About us</h2>
       </div>
@@ -12,8 +12,36 @@
   </div>
 
   <div class="row" style="border-bottom:1px solid #ff7400;">
-    <div class="col-lg-8 col-sm-6 col-xs-12" style="height:650px;background:url(../images/airplane.jpg);background-size:cover;background-position:center;margin-top:0px;">
+    <div class="col-lg-8 col-sm-6 col-xs-12" style="height:650px;background:url(../images/backgrounds/airplane.jpg);background-size:cover;background-position:center;margin-top:0px;">
       <div style="width:102.5%;height:100%;background:rgba(0,0,0,0.8);">
+        <div style="width:76%;height:100%;margin:auto;color:#fff;font-size:18pt;">
+          <div id="about_main" style="overflow-y:scroll;overflow-x:hidden;" class="about-text">
+            <h2 style="text-align:center;padding-top:20px;">About MVG Travel</h2>
+            <p style="text-align:center;">
+              Established in 2016,MVG Travel (PTY) LTD is set to be the leader in the travel and transportation industry.For real! And no! This is not just hopeless ambition, it is really what we are about- Being the best, being the leaders in our field. innovation is one of our biggest traits. We identify problems and create convinient solutions. That's just who we are as a brand.This is an establishment run by a group young visionaries, "master visionaries" I should add.
+              And just by the way, MVG stands for Master Visionaries Group-at least now you know the secrets... You can thank me later.
+            </p>
+          </div>
+
+          <div id="about_more" style="overflow-y:scroll;overflow-x:hidden;display:none;" class="about-text">
+            <h2 style="text-align:center;padding-top:20px;">More about us</h2>
+            <p style="text-align:center;">
+              Okay. let's get to it. MVG Travel is a company founded and led by Simphiwe Moyo on the executive front.
+              Together with co-founders Tumelo Mosime, Obakeng Ngobeni,Lethabo Legadima and Reuben Phiri,
+              this group of young visionaries,excuse me...I'll say that correctly -
+              This group of "young master visionaries" has forged a master piece of a service - getting clients from A to B in
+              alphabetical order with no hassles in between.
+            </p>
+          </div>
+
+          <div id="about_why" style="overflow-y:scroll;overflow-x:hidden;display:none;" class="about-text">
+            <h2 style="text-align:center;padding-top:20px;">Why us?</h2>
+            <p style="text-align:center;">
+              Why MVG Travel? because development, because support,because growth.
+              MVG is a product of the African soil established to develop the african
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -26,13 +54,30 @@
         </div>
 
         <div class="col-*-12" style="height:300px;display:block;">
-          <button class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">About MVG travel</button>
-          <button class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">Why MVG</button>
-          <button class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">More about us</button>
-          <button class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">Vision &amp; Mission</button>
-          <button class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">Goals &amp; Objectives</button>
+          <button onclick="showAbout('main')" class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">About MVG travel</button>
+          <button onclick="showAbout('why')" class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">Why MVG</button>
+          <button onclick="showAbout('more')" class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">More about us</button>
+          <button onclick="showAbout('why')" class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">Vision &amp; Mission</button>
+          <button onclick="showAbout('why')" class="btn btn-primary home-btn" style="background-color:#002638;box-shadow:10px 0px 150px black;height:50px;">Goals &amp; Objectives</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  function showAbout(elem)
+  {
+    //hide all
+    var style = document.querySelectorAll('.about-text').forEach(function(obj)
+    {
+      /*var style = obj.style;
+      style.display='none';
+      obj.style=style;*/
+      obj.style.display='none';
+    });
+
+    var style = document.querySelector('#about_'+elem).style;
+    style.display='initial';
+    document.querySelector('#about_'+elem).style=style;
+  }
+</script>

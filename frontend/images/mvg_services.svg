@@ -11,7 +11,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="100%"
    height="100%"
-   viewBox="-10 0 200 250"
+   viewBox="-10 0 200 200"
    version="1.1"
    id="svg8"
    inkscape:version="0.92pre2 r"
@@ -354,6 +354,15 @@
         if(window.parent.document.querySelector('#'+tab_id))
           window.parent.document.querySelector('#'+tab_id).classList.add('mvg-pane-active');
       });
+
+      if(tab_id=='mvg_events')
+      {
+        var container = window.parent.document.querySelector('#event-buttons-container');
+        console.log(!container.style.visibility);
+        if(container.style.visibility=='hidden' || !container.style.visibility)
+          container.style.visibility='visible';
+        else container.style.visibility='hidden';
+      }
     }
   </script>
 </svg>

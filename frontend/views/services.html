@@ -1,6 +1,6 @@
-<div style="margin-top:140px;width:100%;">
+<div style="margin-top:140px;width:100%;" ng-controller="ServicesController">
   <div class="jumbotron page-header-container">
-    <div class="page-header" style="background-image:url(../images/panorama-1.jpg)">
+    <div class="page-header" style="background-image:url(../images/backgrounds/panorama-1.jpg)">
       <div style="width:100%;height:102%;margin:auto;background:rgba(0,0,0,0.5);">
         <h2 style="text-align:center;color:#fff;padding-top:10%;font-size:42pt;">Services</h2>
       </div>
@@ -11,32 +11,188 @@
     </div>
   </div>
 
-  <div id="mvg_services_container">
-    <object  type="image/svg+xml" data="../images/mvg_services.svg">Web browser not supported.</object>
-  </div>
-
   <div>
-    <div id="mvg_main" name="#mvg_main" class="mvg-tab-pane mvg-pane-active">
-      <p style="text-align:center;">MVG Travel is the solution to all matters regarding travel and transportation.<br/>We have tailor made solutions
-      that will cater for every type of need in the travel and transportation sector. To find out more information about our departments, click on a heading above.</p>
-    </div>
-    <div id="mvg_events" name="#mvg_events" class="mvg-tab-pane">
-      <p style="text-align:center;">With the events department, we aim to answer to the loud cry for event specialised transportation.
-      Be it an event that takes place late at night or an event where masses need to be transported, MVG Travel's
-      got you covered. We are a solution like that. But wait! There's more, we do small events too. We do all events.
-      We di sicual , recreational, sporting, political and event religious events.</p>
-    </div>
-    <div id="mvg_solutions" name="#mvg_solutions" class="mvg-tab-pane">
-      <p style="text-align:center;">The idea was to create a solution that centralised all corporate transportation.
-      So the MVG Travel "Business Solutions" department was born. Simple and convinient corporate transport is now
-    available a click away</p>
-    </div>
-    <div id="mvg_agency" style="background-color:#6F6E73;" name="#mvg_agency" class="mvg-tab-pane">
-
-    </div>
-    <div id="mvg_vip" style="background-color:#D9D8E0;" name="#mvg_vip" class="mvg-tab-pane">
-
-    </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div style="width:80%;margin:auto;margin-top:50px;" id="event-buttons-container">
+        <button class="accordion">Social/Recreational</button>
+        <div class="panel">
+          <div id="liveconcerts-container">
+            <div id="liveconcerts-header" style="width:100%;height:50px;position:fixed;top:0px;background-color:skyblue;">
+              <h2 style="text-align:center;">MVG Affiliated Live Concerts</h2>
+            </div>
+            <button style="bottom:0px;position:absolute;" class="btn btn-success">Dismiss</button>
+            <div ng-repeat="concert in liveconcerts" class="liveconcerts">
+              <img src="../images/logo.png" width="120px" height="50px"/>
+              <h3>{{concert.name}}</h3>
+            </div>
+            <div id="liveconcerts-footer" style="width:100%;height:50px;position:absolute;bottom:0px;background-color:skyblue;">
+              Dismiss
+            </div>
+          </div>
+          <div id="liveconcerts-text-container">
+            <p>Lorem ipsum delores verium norades morales docus cocus</p>
+            <ul>
+              <li><button id="lnk-live-concerts" onclick="liveconcertsClick()">Live Concerts</button></li>
+              <li><a href="#">Parties</a></li>
+              <li><a href="#">Live Concerts</a></li>
+              <li><a href="#">Weddings</a></li>
+              <li><a href="#">Matric Dances</a></li>
+              <li><a href="#">Award Shows</a></li>
+              <li><a href="#">Indabas/Expos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="accordion">Sporting</button>
+        <div class="panel">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+        </div>
+
+        <button class="accordion">Political</button>
+        <div class="panel">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+        </div>
+
+        <button class="accordion">Religious</button>
+        <div class="panel">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+        </div>
+        <!--<button id="btn_social" onclick="showHide('social')" class="form-control btn btn-primary event-btn" style="height:60px;margin-top:10px;margin-bottom:10px;">Social/Recreational</button>
+        <div id="text_social" class="event-text">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+          <div id="accordion">
+            <h3>Live Concerts</h3>
+            <div>
+              <ul>
+                <li>One</li>
+                <li>Two</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button id="btn_sporting" onclick="showHide('sporting')" class="form-control btn btn-primary event-btn" style="height:60px;margin-top:10px;margin-bottom:10px;">Sporting</button>
+        <div id="text_sporting" class="event-text">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+        </div>
+        <button id="btn_political" onclick="showHide('political')" class="form-control btn btn-primary event-btn" style="height:60px;margin-top:10px;margin-bottom:10px;">Political</button>
+        <div id="text_political" class="event-text">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+        </div>
+        <button id="btn_religious" onclick="showHide('religious')" class="form-control btn btn-primary event-btn" style="height:60px;margin-top:10px;margin-bottom:10px;">Religious</button>
+        <div id="text_religious" class="event-text">
+          <p>Lorem ipsum delores verium norades morales docus cocus</p>
+        </div>-->
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div id="mvg_services_container">
+        <object  type="image/svg+xml" data="../images/mvg_services.svg">Web browser not supported.</object>
+      </div>
+
+      <div>
+        <div id="mvg_main" name="#mvg_main" class="mvg-tab-pane mvg-pane-active">
+          <p style="text-align:center;">MVG Travel is the solution to all matters regarding travel and transportation.<br/>We have tailor made solutions
+          that will cater for every type of need in the travel and transportation sector. To find out more information about our departments, click on a heading above.</p>
+        </div>
+        <div id="mvg_events" name="#mvg_events" class="mvg-tab-pane">
+          <p style="text-align:center;">With the events department, we aim to answer to the loud cry for event specialised transportation.
+          Be it an event that takes place late at night or an event where masses need to be transported, MVG Travel's
+          got you covered. We are a solution like that. But wait! There's more, we do small events too. We do all events.
+          We di sicual , recreational, sporting, political and event religious events.</p>
+        </div>
+        <div id="mvg_solutions" name="#mvg_solutions" class="mvg-tab-pane">
+          <p style="text-align:center;">The idea was to create a solution that centralised all corporate transportation.
+          So the MVG Travel "Business Solutions" department was born. Simple and convinient corporate transport is now
+        available a click away</p>
+        </div>
+        <div id="mvg_agency" style="background-color:#6F6E73;" name="#mvg_agency" class="mvg-tab-pane">
+
+        </div>
+        <div id="mvg_vip" style="background-color:#D9D8E0;" name="#mvg_vip" class="mvg-tab-pane">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div style="width:300px;height:240px;background-color:skyblue;border-radius:5px;margin:auto;margin-top:50px;">
+        <p style="text-align:center;padding-top:100px;">Advertisements</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+function showHide(show)
+{
+  var text_show = document.querySelector('#text_'+show).style.visibility;
+  document.querySelectorAll('.event-btn').forEach(function(obj)
+  {
+    obj.style.visibility='hidden';
+  });
+  document.querySelectorAll('.event-text').forEach(function(obj)
+  {
+    obj.style.visibility='hidden';
+  });
+
+  console.log(text_show);
+  if(text_show!='visible')
+  {
+    console.log('showing "%s"', show)
+    document.querySelector('#btn_'+show).style.visibility='visible';
+    document.querySelector('#text_'+show).style.visibility='visible';
+  }else {
+    console.log('showing all buttons')
+    document.querySelectorAll('.event-btn').forEach(function(obj)
+    {
+      obj.style.visibility='visible';
+    });
+  }
+}
+
+function liveconcertsClick()
+{
+  //$('#liveconcerts-container').css({'display':'initial'});
+  var lcc_style = document.querySelector('#liveconcerts-container').style;
+  lcc_style.display='initial';
+  document.querySelector('#liveconcerts-container').style=lcc_style;
+
+  var lctc_style = document.querySelector('#liveconcerts-text-container').style;
+  lctc_style.display='none';
+  document.querySelector('#liveconcerts-text-container').style = lctc_style;
+  //$('#liveconcerts-text-container').css({'display':'none'});
+
+  //align liveconcerts header & footer to top/bottom of liveconcerts-container
+  var cont = $('#liveconcerts-container').position();
+  console.log(cont);
+  var footer_style = document.querySelector('#liveconcerts-footer').style;
+  footer_style.top=cont.y;
+}
+
+$(function()
+{
+  document.querySelectorAll('.event-text').forEach(function(obj)
+  {
+    obj.style.visibility='hidden';
+  });
+
+  //Accordion code
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
+  }
+});
+</script>
