@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const path = require('path');
+const fs = require('fs');
 
 mongoose.connect('mongodb://localhost/mvg');
 var db = mongoose.connection;
@@ -10,12 +12,25 @@ const app = express();
 const events =require('./models/events.js');
 const access_levels =require('./models/system/access_levels.js');
 const errors =require('./models/system/error_msgs.js');
+const PORT = 8002;
+const APP_NAME = "MVG Travel";
 
 //init middle-ware
 app.use(express.static(__dirname + '/frontend'));
 app.use(bodyParser.urlencoded({extended:true}));
 
 //init route handlers
+app.get('/:object',function(req, res)
+{
+  var fpath = path.join(__dirname, '/public/'+req.params.object);
+  var stat = fs.statSync(fpath);
+  res.writeHead(200,{'Content-Type':'text/plain','Content-Length':stat.size});
+
+  var dataStream = fs.createReadStream(fpath);
+  dataStream.pipe(res);
+  console.log('served object "%s"', req.params.object);
+});
+
 app.get('/',function(req, res)
 {
   res.end('Root request. Use /api/*');
@@ -305,5 +320,5 @@ app.post('/api/auth',function(req, res)
   });
 });
 
-app.listen(8080);
-console.log('Server running on port 8080....');
+app.listen(PORT);
+console.log('%s server running at localhost on port %s...', APP_NAME, PORT);
