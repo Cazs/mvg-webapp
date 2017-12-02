@@ -1,0 +1,50 @@
+<div style="margin-top:140px;width:100%;">
+  <h2 style="text-align:center;color:#ff7400;padding-top:1%;font-size:42pt;">Downloads Repository</h2>
+  <!-- <div class="jumbotron page-header-container">
+    <div class="page-header" style="background-image:url(../images/backgrounds/panorama-2.jpg)">
+      <div style="width:100%;height:102%;margin:auto;background:rgba(0,0,0,0.5);">
+        <h2 style="text-align:center;color:#fff;padding-top:10%;font-size:42pt;">Downloads Repository</h2>
+      </div>
+    </div>
+  </div>
+  <div style="background-color:#002638;height:40px;">
+    <div style="width:250px;height:100%;margin-top:-50px;margin-left:-10px;background-color:#FF7400;transform:skew(30deg);box-shadow:10px 0px 15px black;">
+    </div>
+  </div> -->
+
+  <table style="width:80%;margin:auto;margin-bottom: 50px;" border="1px">
+    <tr>
+      <th>
+        <p style="text-align:center;">Filename</p>
+      </th>
+      <th>
+        <p style="text-align:center;">Download Link</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <h3 style="text-align:center;">MVG Reception Windows&reg; desktop client v0.1 (x64) </h3>
+      </td>
+      <td>
+        <a style="text-align:center;margin-left:30px;" class="btn btn-default" href="http://192.168.0.101:9999/MVG_Reception-0.1.exe">Download</a>
+      </td>
+    </tr>
+  </table>
+</div>
+<script>
+  function showAbout(elem)
+  {
+    //hide all
+    var style = document.querySelectorAll('.about-text').forEach(function(obj)
+    {
+      /*var style = obj.style;
+      style.display='none';
+      obj.style=style;*/
+      obj.style.display='none';
+    });
+
+    var style = document.querySelector('#about_'+elem).style;
+    style.display='initial';
+    document.querySelector('#about_'+elem).style=style;
+  }
+</script>

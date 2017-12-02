@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html ng-app="mvg" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Master Visionary Group Travel website.">
+    <meta name="author" content="Casper">
+    <link rel="icon" href="./favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="./css/textslider.css" type="text/css">
+
+    <title>MVG Travel</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <link rel="stylesheet" href="./css/accordion.css" type="text/css">
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top" style="border-radius:0px;border-width:0px;margin-bottom:0px;">
+      <div class="container-fluid nav-upper" style="border-bottom:1px solid #E84E0E">
+        <div class="navbar-header">
+          <button id="menu_toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="width:40px;height:40px;margin-right:40px;">
+            <span class="sr-only">Toggle navigation</span>
+            <span style="background-color: #fff;" class="icon-bar"></span>
+            <span style="background-color: #fff;" class="icon-bar"></span>
+            <span style="background-color: #fff;" class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <div id="logo_container">
+              <img src="./images/logo.png" style="width:115px;height:45px;position:absolute;bottom:0px;margin-bottom:10px;" alt="Logo"/>
+            </div>
+          </a>
+        </div>
+        <form class="navbar-form navbar-right" style="margin-top:25px;">
+          <div class="input-group" style="margin:auto;">
+            <input type="text" placeholder="Search" aria-describedby="search" name="search" class="form-control" id="search" style="width:220px;height:30px;border-top-left-radius:15px;border-bottom-left-radius:15px;border:1px solid #fff;"/>
+            <button type="submit" class="btn btn-default input-group-addon" style="width:45px;height:30px;border-top-right-radius:15px;border-bottom-right-radius:15px;border:1px solid #fff;">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <div style="width:100%;height:100%;background-color:#343434;">
+          <div id="parallelogram">
+            <ul>
+              <li><a href="#!/">Home</a></li>
+              <li><a href="#!/services">Services</a></li>
+              <li><a href="#!/about">About</a></li>
+              <li><a href="#!/contact">Contact</a></li>
+              <li><a href="#!/downloads">Downloads</a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!--/.nav-collapse -->
+    </nav>
+
+    <div ng-view style="margin-top: 80px;">
+    </div>
+
+    <div id="dialog_events" class="popup-dialog" title="MVG Events" ng-controller="EventsController">
+      <h2 style="text-align: center;">Available Events</h2>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:320px;overflow-y:scroll;">
+          <div class="event-card" ng-repeat="evt in events" id="{{evt._id}}">
+
+            <div class="front">
+              <img class="event-logo" src="./images/logo.png"/>
+              <p style="width:100%;text-align:center;color:#fff;">{{evt.event_name}}</p>
+            </div>
+
+            <div class="back" style="background-color:#343434;">
+              <img class="event-logo" src="./images/logo.png"/>
+              <p style="width:100%;text-align:center;color:#fff;">{{evt.event_name}}</p>
+              <!--<p style="width:100%;text-align:center;color:#fff;">{{evt.event_description}}</p>-->
+              <p style="width:100%;text-align:center;color:#fff;">Date: {{evt.event_date}}</p>
+              <p style="width:100%;text-align:center;color:#fff;">At: {{evt.event_venue}}</p>
+              <p style="width:100%;text-align:center;color:#fff;">GPS: {{evt.event_location}}</p>
+              <p style="width:100%;text-align:center;color:#fff;">Tickets cost R{{evt.event_price}}</p>
+
+              <!--<button class="btn btn-default" style="margin:auto;">Click for more</button>-->
+              <div style="text-align: center;">
+                <a class="btn btn-default btn-more" id="{{evt}}">Click for more</a>
+              </div>
+
+              <div style="text-align: center;margin-top:10px;">
+                <a class="btn btn-success btn-buy" style="width:100px;" id="{{evt}}">Buy</a>
+              </div>
+              <!--<textarea style="width:100%;margin-top:80%;height:50px;background:none;border:none;">
+                {{event.event_name}}
+              </textarea>
+              <!--<label for="{{event._id}}">{{event.event_name}}</label>
+              type="text" enabled="false"
+              <span style="text-align:center;margin-top:80%;">{{event.event_name}}</span>-->
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div style="width:150px;margin:auto;margin-top:30px;">
+        <button onclick="$('#dialog_events').parenthide();" type="submit" class="btn btn-success" style="width:150px;height:50px;margin:auto;">Dismiss</button>
+      </div>
+    </div>
+
+    <div id="dialog_events_expanded" class="popup-dialog" title="MVG Events">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:320px;overflow-y:scroll;">
+
+          <div style="border: 2px solid #3C3C3C;border-radius:5px;margin-top:20px;">
+
+            <div style="margin-left:150px;">
+              <div id="logo_container">
+                <img src="./images/logo.png" style="width:115px;height:45px;position:absolute;" alt="MVG Logo"/>
+              </div>
+              <h2 id="event_name">Event name</h2>
+            </div>
+
+            <div style="margin-top:150px;">
+              <p>Come join us on</p>
+              <p id="event_date">Date: </p>
+              <p id="event_loc">At: </p>
+              <p id="event_gps">GPS: </p>
+              <p id="event_cost">Price: R</p>
+            </div>
+
+            <div>
+              <h3 style="text-align:center;">Additional Event Information</h3>
+              <p id="event_desc" style="text-align:center;">Event description</p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      <div style="width:150px;margin:auto;margin-top:30px;">
+        <button onclick="$('#dialog_events').parenthide();" type="submit" class="btn btn-success" style="width:150px;height:50px;margin:auto;">Dismiss</button>
+      </div>
+    </div>
+
+    <footer style="width:100%;color:#fff;">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div style="width:100%;background:rgba(255,116,0,0.0);">
+            <div style="width:30%;margin:auto;margin-top:0px;">
+              <div class="row">
+                <div class="col-lg-3 col-sm-6 col-xs-12 social-link" id="social-facebook">
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 social-link" id="social-linkedin">
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 social-link" id="social-twitter">
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 social-link" id="social-instagram">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div style="margin-top:20px;">
+            <h4 style="text-align:center;">MVG &copy;, est. 2016,</h4>
+            <h5 style="text-align:center;">Developed by <a href="#" style="text-decoration:underline;color:#fff;">Casper</a></h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <h4 style="text-align:center;margin-top:35px;">Terms and Conditions apply</h4>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./bower_components/jquery/jquery.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./bower_components/flip/dist/jquery.flip.min.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+
+    <script src="./app.js"></script>
+    <script src="./controllers/home.js"></script>
+    <script src="./controllers/services.js"></script>
+    <script src="./controllers/events.js"></script>
+    <script src="./controllers/downloads.js"></script>
+
+    <script>
+      $('#navbar li a').click(function(evt)
+      {
+        console.log(evt);
+        $('#navbar li a').removeClass('nav-active');
+        $(this).addClass('nav-active');
+      });
+
+      function showEvents()
+      {
+        document.querySelectorAll('.btn-more').forEach(function(more_info_btn)
+        {
+          more_info_btn.addEventListener('click', function(e)
+          {
+            showExpandedEvent(decodeURI(more_info_btn.id));
+          });
+        });
+
+        document.querySelectorAll('.event-card').forEach(function(card)
+        {
+          var card_div = document.getElementById(card.id);
+          if(card_div)
+          {
+            $(card_div).hover(function(ev)
+            {
+              card_div.style.border = '2px solid #FF7400';
+            },function(ev)
+            {
+              card_div.style.border = '1px solid #17B9FF';
+            });
+          }
+          else console.log('card_div not found.');
+
+          $("#"+card.id).flip(
+          {
+            axis: 'x',
+            trigger: 'hover'
+          });
+
+          /*card.addEventListener('click',function(ev)
+          {
+              console.log('tile click');
+          });*/
+        });
+
+        if($("#dialog_events").parent().css('display')=='none')
+        {
+          $("#dialog_events" ).parent().css({'display':'initial'});
+          $("#dialog_events" ).parent().css({'position':'fixed'});
+
+          if($(window).width()>=500)
+          {
+            $("#dialog_events" ).parent().css({'top':'30%'});
+            $("#dialog_events" ).parent().css({'left':'30%'});
+          }else
+          {
+            $("#dialog_events" ).parent().css({'top':'5%'});
+            $("#dialog_events" ).parent().css({'left':'5%'});
+          }
+        }else{
+          $( "#dialog_events" ).parent().css({'display':'none'});
+        }
+      }
+
+      function showExpandedEvent(evt)
+      {
+        if($("#dialog_events_expanded").parent().css('display')=='none')
+        {
+          $("#dialog_events_expanded" ).parent().css({'display':'initial'});
+          $("#dialog_events_expanded" ).parent().css({'position':'fixed'});
+
+          if($(window).width()>=500)
+          {
+            $("#dialog_events_expanded" ).parent().css({'top':'30%'});
+            $("#dialog_events_expanded" ).parent().css({'left':'30%'});
+          }else
+          {
+            $("#dialog_events_expanded" ).parent().css({'top':'5%'});
+            $("#dialog_events_expanded" ).parent().css({'left':'5%'});
+          }
+        }else{
+          $( "#dialog_events_expanded" ).parent().css({'display':'none'});
+        }
+        //update text
+        var evnt = JSON.parse(evt);
+        //console.log(evnt.event_name);
+        $('#dialog_events_expanded #event_name').text(evnt.event_name);
+        $('#dialog_events_expanded #event_date').text(evnt.event_date);
+        $('#dialog_events_expanded #event_gps').text("GPS: "+evnt.event_location);
+        $('#dialog_events_expanded #event_loc').text("At: "+evnt.event_venue);
+        $('#dialog_events_expanded #event_cost').text("Tickets cost: "+evnt.event_price);
+        $('#dialog_events_expanded #event_desc').text(evnt.event_description);
+      }
+
+      /*function showExpandedEvent()
+      {
+        if($("#dialog_events").parent().css('display')=='none')
+        {
+          $("#dialog_events" ).parent().css({'display':'initial'});
+          $("#dialog_events" ).parent().css({'position':'fixed'});
+
+          if($(window).width()>=500)
+          {
+            $("#dialog_events" ).parent().css({'top':'30%'});
+            $("#dialog_events" ).parent().css({'left':'30%'});
+          }else
+          {
+            $("#dialog_events" ).parent().css({'top':'5%'});
+            $("#dialog_events" ).parent().css({'left':'5%'});
+          }
+        }else{
+          $( "#dialog_events" ).parent().css({'display':'none'});
+        }
+      }*/
+
+      $(document).ready(function()
+      {
+        //$('div[onload]').trigger('onload');
+
+        /*
+          var toggled = false;
+          $("#menu_toggle").click(function(){
+            if(!toggled)
+            {
+              $("#logo_container").animate({height:"80px"}, 100);
+            }else{
+              $("#logo_container").animate({height:"140px"}, 100);
+            }
+              //toggled = toggled?!toggled:toggled;
+              if(!toggled) toggled = true;else toggled=false;
+          });
+        */
+
+        if($(window).width()>992)
+        {
+          $( "#dialog_events" ).dialog({width:820});
+          $( "#dialog_events" ).parent().css({'margin-left':'-200px'});
+        }else//($(window).width()<600)
+        {
+          //set up events dialog for small screens
+          $( "#dialog_events" ).dialog({width:$(window).width()});
+          $( "#dialog_events" ).dialog({height:600});
+          $( "#dialog_events" ).parent().css({'margin-left':'-20px'});
+          //$( "#dialog_events" ).parent().css({'margin-top':'50px'});
+        }
+
+        //apply box shadow on both
+        $( "#dialog_events" ).parent().css({'display':'none'});
+        $( "#dialog_events" ).parent().css({'-webkit-box-shadow':'0px 0px 40px #343434'});
+        $( "#dialog_events" ).parent().css({'-moz-box-shadow':'0px 0px 40px #343434'});
+        $( "#dialog_events" ).parent().css({'-o-box-shadow':'0px 0px 40px #343434'});
+        $( "#dialog_events" ).parent().css({'box-shadow':'0px 0px 40px #343434'});
+
+        //var cards = $('.event-card');
+        //console.log(document.querySelectorAll('.event-card'));
+
+        //set up expanded events dialog
+        if($(window).width()>992)
+        {
+          $( "#dialog_events_expanded" ).dialog({width:500});
+          $( "#dialog_events_expanded" ).parent().css({'margin-left':'-100px'});
+        }else//($(window).width()<600)
+        {
+          //set up events dialog for small screens
+          $( "#dialog_events_expanded" ).dialog({width:$(window).width()*0.88});
+          $( "#dialog_events_expanded" ).dialog({height:400});
+          $( "#dialog_events_expanded" ).parent().css({'margin-left':'0px'});
+          $( "#dialog_events_expanded" ).parent().css({'margin-top':'100px'});
+        }
+
+        //apply box shadow on both
+        $( "#dialog_events_expanded" ).parent().css({'display':'none'});
+        $( "#dialog_events_expanded" ).parent().css({'-webkit-box-shadow':'0px 0px 40px #343434'});
+        $( "#dialog_events_expanded" ).parent().css({'-moz-box-shadow':'0px 0px 40px #343434'});
+        $( "#dialog_events_expanded" ).parent().css({'-o-box-shadow':'0px 0px 40px #343434'});
+        $( "#dialog_events_expanded" ).parent().css({'box-shadow':'0px 0px 40px #343434'});
+      });
+
+        window.addEventListener('scroll',function(event)
+        {
+          var doc = document.documentElement;
+          var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+          var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+          if(top<=200)
+          {
+            if(top/200>=0.1)
+            $('#parallelogram').css({'background-color':'rgba(0, 0, 0, '+(top/200)+')'});
+            else $('#parallelogram').css({'background-color':'rgba(0, 0, 0, 0.2)'});
+          }else{
+            $('#parallelogram').css({'background-color':'rgba(0, 0, 0, 0.9)'});
+          }
+        });
+    </script>
+  </body>
+</html>
